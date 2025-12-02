@@ -1,3 +1,5 @@
 *.png
-.flower_photos/
-.*jpg
+flower_photos/
+*.jpg
+*.jpeg
+ML/Lab 5/flower_photos
