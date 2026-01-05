@@ -4,3 +4,6 @@ flower_photos/
 *.jpeg
 ML/Lab 5/flower_photos
 .idea
+checkpoints/
+finetuned_model_local/
+.venv/

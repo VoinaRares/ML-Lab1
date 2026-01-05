@@ -6,11 +6,11 @@ authors = [
     {name = "Your Name",email = "you@example.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13, <3.14"
+requires-python = ">=3.11, <3.14"
 dependencies = [
     "pandas (>=2.3.3,<3.0.0)",
     "matplotlib (>=3.10.7,<4.0.0)",
-    "numpy (>=2.3.3,<3.0.0)",
+    "numpy (>=1.2.6,<2.0.0)",
     "jupyter (>=1.1.1,<2.0.0)",
     "ipython (>=9.6.0,<10.0.0)",
     "seaborn (>=0.13.2,<0.14.0)",
@@ -23,7 +23,11 @@ dependencies = [
     "anywidget (>=0.9.18,<0.10.0)",
     "imblearn (>=0.0,<0.1)",
     "tensorflow (>=2.20.0,<3.0.0)",
-    "tensorflow-datasets (>=4.9.9,<5.0.0)"
+    "tensorflow-datasets (>=4.9.9,<5.0.0)",
+    "transformers (>=4.57.3,<5.0.0)",
+    "faiss-cpu (>=1.13.2,<2.0.0)",
+    "pypdf2 (>=3.0.1,<4.0.0)",
+    "sentence-transformers (>=5.2.0,<6.0.0)"
 ]
 
 
@@ -33,19 +37,9 @@ build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
-    "ipykernel (>=7.1.0,<8.0.0)"
+    "ipykernel (>=7.1.0,<8.0.0)",
+    "pypdf2 (>=3.0.1,<4.0.0)"
 ]
 
 [tool.poetry]
 package-mode = false
-
-
-
-[[tool.poetry.source]]
-name = "pytorch-nightly"
-url = "https://download.pytorch.org/whl/nightly/cpu"
-priority = "supplemental"
-
-[tool.poetry.dependencies]
-torch = { version = "*", source = "pytorch-nightly", allow-prereleases = true }
-torchvision = { version = "*", source = "pytorch-nightly", allow-prereleases = true }
